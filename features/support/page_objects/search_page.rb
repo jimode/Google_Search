@@ -12,4 +12,8 @@ class Search < SitePrism::Page
         elements :titles, 'h3'
         elements :descriptions, '.s'
     end
+
+    def find_index_for(search_word)
+        search_drop_down.options.find_index { |option| option.text == search_word }
+    end
 end

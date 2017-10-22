@@ -8,9 +8,9 @@ Given("I am on the google page") do
   
   When("I enter in a search word cucumber") do
     @search_page.search_field.set 'cucumber'
-    # @search_page.search_button.click
     @search_page.wait_until_search_drop_down_visible
-    @search_page.search_drop_down.options.first.click
+    index = @search_page.find_index_for('cucumber')
+    @search_page.search_drop_down.options[index].click
 end
   
   Then("I should see a search page results") do
