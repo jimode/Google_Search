@@ -24,7 +24,7 @@ end
     end
   end
   
-  Then("the search results description should contain the word {string}") do |search_word|
+  Then("the search results descriptions should contain the word {string}") do |search_word|
     @results_page.results_container.titles.each do |result_descriptions|
         expect(result_descriptions.text.downcase).to include(search_word)
     end

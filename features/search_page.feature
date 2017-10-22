@@ -8,4 +8,4 @@ Scenario: Search for an item
   When I enter in a search word "cucumber"
   Then I should see a search page results
   And the search results titles shoud contain the word "cucumber"
-  And the search results description should contain the word "cucumber"
+  And the search results descriptions should contain the word "cucumber"

@@ -1,5 +1,5 @@
 class Search < SitePrism::Page
-    set_url "http:www.google.co.uk"
+    set_url "/"
 
     element :search_field, '#lst-ib'
     element :search_button, '[input[name="btnK"]'
