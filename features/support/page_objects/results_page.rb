@@ -1,4 +1,4 @@
-class Search < SitePrism::Page
+class Results < SitePrism::Page
     set_url "/"
 
     section :results_container, '#search' do
