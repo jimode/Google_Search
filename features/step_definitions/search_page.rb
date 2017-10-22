@@ -20,9 +20,13 @@ end
   end
   
   Then("the search results titles shoud contain the word cucumber") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @results_page.results_container.titles.each do |result_titles|
+        expect(result_titles.text.downcase).to include('cucumber')
+    end
   end
   
   Then("the search results description should contain the word cucumber") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @results_page.results_container.titles.each do |result_descriptions|
+        expect(result_descriptions.text.downcase).to include('cucumber')
+    end
   end
