@@ -1,6 +1,8 @@
 Given("I am on the google page") do
     @search_page = Search.new
     @search_page.load
+    @results_page = Search.new
+    @results_page.load
     # expect(@search_page).to be_displayed
   end
   
@@ -12,9 +14,9 @@ Given("I am on the google page") do
 end
   
   Then("I should see a search page results") do
-    expect(@search_page).to have_results_container
-    expect(@search_page.results_container).to have_titles
-    expect(@search_page.results_container).to have_descriptions
+    expect(@results_page).to have_results_container
+    expect(@results_page.results_container).to have_titles
+    expect(@results_page.results_container).to have_descriptions
   end
   
   Then("the search results titles shoud contain the word cucumber") do
